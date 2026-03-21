@@ -1,0 +1,17 @@
+{
+    "name": "vik-op/password-generator",
+    "description": "Password Generator",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "*"
+    },
+    "scripts": {
+        "lint": "phpcs --standard=PSR12 src/",
+        "fix": "phpcbf --standard=PSR12 src/"
+    }
+}
