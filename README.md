@@ -22,11 +22,11 @@ The application requires **PHP 8.1+** and **Composer**.
 ```bash
 git clone https://github.com/vik-op/password-generator.git
 ```
+
+### 2. Install dependencies (Autoloader)
 ```bash
 cd password-generator
 ```
-
-### 2. Install dependencies (Autoloader)
 ```bash
 composer install
 ```
