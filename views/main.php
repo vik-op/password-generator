@@ -21,14 +21,15 @@
     <div class="container">
         <h2>Type numbers of symbols</h2>
         <div class="form-group">
-            <label for="length">Length (1-32):</label>
-            <input type="number" id="length" min="1" max="32" value="8">
+            <label for="length">Length (1-64):</label>
+            <input type="number" id="length" min="1" max="64" value="8">
         </div>
         
         <div class="form-group checkbox-group">
             <label><input type="checkbox" id="digits" checked> Numbers without 0 and 1</label>
             <label><input type="checkbox" id="upper" checked> Big letters without o and O</label>
             <label><input type="checkbox" id="lower" checked> Small letters without "l"</label>
+            <label><input type="checkbox" id="symbol" checked> Symbols without "!"</label>
         </div>
 
         <button id="generate-btn">Generate</button>

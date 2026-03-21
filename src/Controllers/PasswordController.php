@@ -8,6 +8,7 @@ use App\Services\PasswordGenerator;
 use App\Services\DigitSet;
 use App\Services\UpperCaseSet;
 use App\Services\LowerCaseSet;
+use App\Services\SymbolSet;
 use App\Services\FileHistoryStorage;
 use Throwable;
 use RuntimeException;
@@ -19,7 +20,8 @@ class PasswordController
         $availableSets = [
             new DigitSet(),
             new UpperCaseSet(),
-            new LowerCaseSet()
+            new LowerCaseSet(),
+            new SymbolSet()
         ];
 
         $activeSets = [];
@@ -32,10 +34,10 @@ class PasswordController
         $length = (int)($data['length'] ?? 0);
         $activeSetsCount = count($activeSets);
 
-        if ($length < 1 || $length > 32 || $activeSetsCount === 0) {
+        if ($length < 1 || $length > 64 || $activeSetsCount === 0) {
             return json_encode([
                 'success' => false,
-                'message' => 'Invalid parameters: length must be 1-32 and at least one set selected.'
+                'message' => 'Invalid parameters: length must be 1-64 and at least one set selected.'
             ]);
         }
 

@@ -8,7 +8,8 @@ document.getElementById('generate-btn').addEventListener('click', async () => {
         length: parseInt(document.getElementById('length').value),
         digits: document.getElementById('digits').checked,
         upper: document.getElementById('upper').checked,
-        lower: document.getElementById('lower').checked
+        lower: document.getElementById('lower').checked,
+        symbol: document.getElementById('symbol').checked
     };
 
     if (responseMsg) {
@@ -16,7 +17,7 @@ document.getElementById('generate-btn').addEventListener('click', async () => {
         responseMsg.style.color = 'black';
     }
 
-    if (!data.digits && !data.upper && !data.lower) {
+    if (!data.digits && !data.upper && !data.lower && !data.symbol) {
         if (responseMsg) {
             responseMsg.innerText = 'Please select at least one character set!';
             responseMsg.style.color = 'red';
